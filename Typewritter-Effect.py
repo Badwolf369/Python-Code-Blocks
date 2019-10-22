@@ -1,9 +1,10 @@
 from time import sleep
+from random import *
 
 def write(text):
     for c in text:
         print(c, end='', flush=True)
-        sleep(0.15)
+        sleep(uniform(0.2, 0.1))
     print('')
    
 write('Hello World!')
