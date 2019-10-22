@@ -1,10 +1,8 @@
 from time import sleep
-import sys
 
 def write(text):
     for c in text:
-        print(c, end='')
-        sys.stdout.flush()
+        print(c, end='', flush=True)
         sleep(0.15)
     print('')
    
