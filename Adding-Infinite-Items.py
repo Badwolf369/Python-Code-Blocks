@@ -5,7 +5,7 @@ prompt = '-->:'
 confirmCommand = 'done'
 
 #----------------------------------------------------------------------------------------#
-#place this near the beginning
+#place this during function definitions; near the beginning
 
 #this makes sure you get the correct inputs
 def request(inp):
@@ -23,6 +23,7 @@ def request(inp):
 
 #------------------------------------------------------------------------------------------#
 #place this where you want the promts to begin
+#run this block of code every time you wish to enter more inputs
 
 #place beginning dialogue here
 
@@ -36,4 +37,3 @@ while True:
             break
 
 #data[] now holds all the prompts
-#run this block of code every time you wish to enter more inputs
