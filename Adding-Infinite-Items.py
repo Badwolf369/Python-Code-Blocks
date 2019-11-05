@@ -2,17 +2,18 @@
 
 data = []
 prompt = '-->:'
-confirmCommand = 'CONFIRM'
+confirmCommand = 'done'
 
 #----------------------------------------------------------------------------------------#
 #place this near the beginning
 
+#this makes sure you get the correct inputs
 def request(inp):
     if(inp!=confirmCommand):
         try:
-            i = int(inp)
+            #test for correct input
         except:
-            print('Please input numbers or "'+confirmCommand+'" to calculate.')
+            print('Please input correct inputs or "'+confirmCommand+'" to calculate.')
             return 0
         else:
             data.append(i)
@@ -23,9 +24,9 @@ def request(inp):
 #------------------------------------------------------------------------------------------#
 #place this where you want the promts to begin
 
-print('Please input numbers to be added together.') 
-print('Use the command '+confirmCommand+'to add items together.')
+#place beginning dialogue here
 
+#this runs the prompts and tests to see if you said to finish
 while True:
     x = request(input(prompt))
     if x == confirmCommand:
@@ -34,11 +35,5 @@ while True:
         if y==confirmCommand:
             break
 
-#------------------------------------------------------------------------------------------#
-#place where you would like the given prompts to be added
-    
-n=0  
-for a in data:
-    n += a
-    
-#n equals the sum of the items added
+#data[] now holds all the prompts
+#run this block of code every time you wish to enter more inputs
