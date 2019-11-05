@@ -31,7 +31,7 @@ def request(inp):
 while True:
     x = request(input(prompt))
     if x == confirmCommand:
-        print('You ran the "'+confirmCommand+'" command, enter again to continue.') 
+        print('You ran the "'+confirmCommand+'" command, enter again to save.') 
         y = input(prompt)
         if y==confirmCommand:
             break
