@@ -12,12 +12,12 @@ def request(inp):
     if(inp!=confirmCommand):
         try:
             #test for correct input
+            if():
+               raise Exception()
         except:
-            print('Please input correct inputs or "'+confirmCommand+'" to calculate.')
-            return 0
+            print('Error message')
         else:
-            data.append(i)
-            return 1
+            data.append(inp)
     else:
         return confirmCommand
 
