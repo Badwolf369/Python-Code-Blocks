@@ -1,5 +1,5 @@
 from time import sleep
-import random
+from random import uniform
 
 #--------------------------------------------------------------#
 
