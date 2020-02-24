@@ -54,8 +54,27 @@ def bubble_sort(vals, place=0, pattern='ascending'):
         ns -= 1
     return vals
 
+
 class BubbleSort():
-    def ascending(self, vals):
+    def _validate_data(self, vals, dataType, dataPlace):
+        if dataType == 'n':
+            for i in vals:
+                if type(i) not in (int, float):
+                    raise TypeError('dataType does not match passed in data')
+            metaVals = [[v] for v in vals]
+            return metaVals
+        elif dataType == 's':
+            for i in vals:
+                if len(i) < dataPlace:
+                    raise IndexError('metadata location outside of metadata tags')
+            return vals
+        else:
+            raise TypeError(f'dataType argument \'{dataType}\' not recognized')
+
+
+    def ascending(self, vals, dataType='n', dataPlace=0):
+        vals = self._validate_data(vals, dataType, dataPlace)
+
         ns = len(vals)
         while ns > 0:
             try:
@@ -77,6 +96,7 @@ class BubbleSort():
                 ns -= 1
         return vals
 
+
 def shaker(vals):
     pass
 
@@ -94,6 +114,6 @@ def tim(vals):
 
 
 unsorted = [(6, 3), (2, 5), (5, 2), (1, 1), (1, 4), (4, 0)]
-bub = BubbleSort()
-srtd = bub.ascending(unsorted)
+bubble = BubbleSort()
+srtd = bubble.ascending(unsorted)
 print(f'Bubble Sort: {srtd}')
