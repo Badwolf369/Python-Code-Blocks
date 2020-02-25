@@ -60,10 +60,13 @@ class BubbleSort():
         if dataType == 'n':
             for i in vals:
                 if type(i) not in (int, float):
-                    raise TypeError('dataType does not match passed in data')
+                    raise TypeError('data type does not match entered data')
             metaVals = [[v] for v in vals]
             return metaVals
         elif dataType == 's':
+            for i in vals:
+                if type(i) not in (list, tuple):
+                    raise TypeError('data type does not match entered data')
             for i in vals:
                 if len(i) < dataPlace:
                     raise IndexError('metadata location outside of metadata tags')
@@ -97,7 +100,7 @@ class BubbleSort():
         return vals
 
 
-def shaker(vals):
+def merge(vals):
     pass
 
 def insertion(vals):
@@ -106,10 +109,7 @@ def insertion(vals):
 def quick(vals):
     pass
 
-def radix(vals):
-    pass
-
-def tim(vals):
+def shell(vals):
     pass
 
 
