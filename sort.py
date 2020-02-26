@@ -64,6 +64,11 @@ def encode(vals, dataType):
 
 
 class BubbleSort():
+    """Sort using Bubble Sort.
+    
+    Returns:
+        list -- given values sorted to specified order
+    """
     def ascending(self, vals, dataType='n', dataPlace=0):
         """Sort given items 'vals' in acending order.
         
@@ -123,10 +128,40 @@ class BubbleSort():
         return encode(vals, dataType)
 
 
-def merge(vals):
-    pass
+class insertionSort():
+    def ascending(self, vals, dataType='n', dataPlace=0):
+        ns = len(vals)
+        while ns > 0:
+            for i in range(len(vals)):
+                x = i
+                while x > 0:
+                    if vals[x] < vals[x-1]:
+                        vals[x], vals[x-1] = vals[x-1], vals[x]
+                        x -= 1
+                        print(vals)
+                    else:
+                        break
+                ns -= 1
+        return vals
 
-def insertion(vals):
+
+    def descending(self, vals, dataType='n', dataPlace=0):
+        ns = len(vals)
+        while ns > 0:
+            for i in range(len(vals)):
+                x = i
+                while x > 0:
+                    if vals[x] > vals[x-1]:
+                        vals[x], vals[x-1] = vals[x-1], vals[x]
+                        x -= 1
+                        print(vals)
+                    else:
+                        break
+                ns -= 1
+        return vals
+
+
+def merge(vals):
     pass
 
 def quick(vals):
