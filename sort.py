@@ -1,4 +1,4 @@
-def validate_data(self, vals, dataType, dataPlace):
+def validate_data(vals, dataType, dataPlace):
     """initialize given information and check for errors
     
     Arguments:
@@ -109,7 +109,7 @@ class BubbleSort():
             list -- list of sorted data
         """
         # error testing
-        vals = self._validate_data(vals, dataType, dataPlace)
+        vals = validate_data(vals, dataType, dataPlace)
 
         # sorting algorithm
         ns = len(vals)
@@ -147,7 +147,7 @@ if __name__ == '__main__':
     print(bubble.ascending(unsorted1, 's', 1))
     print(bubble.descending(unsorted1, 's', 1))
 
-    insert = 
+    # insert = 
     print(f'Insertion Sort:')
     print(bubble.ascending(unsorted2))
     print(bubble.descending(unsorted2))
